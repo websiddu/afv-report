@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Project proposal"
+date:   2014-12-01 14:00:11
+categories: jekyll update
+---
+### Introduction
+
+While “environmental conservation” has not been a consistent hot-button topic for political leaders for very long, climate change debating and advocacy have been increasing steadily over the last few decades. Developing countries, population spikes, the progression and supply of motor vehicles, and many more factors have made considerations to the planet’s environmental stability a necessity. We plan to utilize data from the Department of Energy to identify the trends and correlations of alternative energy vehicles (AEVs) usage. If possible, we will calculate the carbon emissions savings resulting from the alternative fuels used over the reporting period.
+
+To stay within a reasonable scope, our plan is to focus on the United States which according to the World Bank data viewed in class had a fairly consistent ratio of motor vehicles to population throughout the last 2 decades. Given that, it will hopefully be valuable to identify rates of change for alternative energy resources, if increases with fossil/petroleum fuels correspond to alternative energy costs, which alternative energy vehicle types are expanding via cost-benefit-analysis, and which states are adopting them the quickest. While many AEVs are gaining popularity, such as the Toyota Prius, Nissan Leaf, and the Tesla Model S, there are many other alternative energy sources that can power vehicles that are not as widely known, including liquid natural gas, compressed natural gas, ethanol and methanol.
+
+Our purpose is to locate trends and persuasively present information regarding AEVs to be used as a tool of advocacy for environmental conversation. If given enough time, wider scope, and additional data sets, we may attempt to focus on correlations of highly polluted states to AEV expansion, and attempt to identify if the amount of alternative energy being produced has enough beneficial impact on our society.
+
+### Related Work
+
+As a part of the data discovery and cleaning phase, we will explore existing research and presentation of related AEV and fuel sources data. Understanding the pre-existing work of others will help to refine our ideas and research questions, so that we are covering new ground and not simply confirming what already exists.
+
+Though this data set is controversial, there is a variety of different related work out there focusing on AEV fuel consumption. For instance we will be able to stack the US against the world in terms of consumption of AEV fuel consumption based on this visualization and research from the Oil Drum.

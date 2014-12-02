@@ -163,6 +163,14 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    .wrapper {
+      padding: 50px 60px;
+      background-color: #fff;
+      box-shadow: 0 0 4px rgba(157, 157, 157, 0.16);
+      @include media-query($on-palm) {
+        padding: 10px 20px;
+      }
+    }
 }
 
 .page-heading {
@@ -220,6 +228,7 @@
 
     h3 {
         font-size: 26px;
+        margin-bottom: 0;
 
         @include media-query($on-laptop) {
             font-size: 22px;
