@@ -4,6 +4,9 @@ title: Report
 permalink: /
 ---
 
+
+ ---- Work in progress ----
+
 <div class="toc">
 <h3> Table of contents </h3>
 <ol>
@@ -25,12 +28,12 @@ permalink: /
           <li><a href="#chapter-5-sh1-se2"><span> Survey Results and Validation</span></a></li>
         </ol>
       </li>
-      <li><a href="chapter-5.xhtml#chapter-5-sh4"><span> Usability Study </span></a>
+      <li><a href="chapter-5-sh2"><span> Usability Study </span></a>
         <ol>
-          <li><a href="chapter-5.xhtml#chapter-5-sh5"><span> Usability Test Goal and Design</span></a></li>
-          <li><a href="chapter-5.xhtml#chapter-5-sh6"><span> Usability Test Process </span></a></li>
-          <li><a href="chapter-5.xhtml#chapter-5-sh7"><span> Usability Test Results Summary</span></a></li>
-          <li><a href="chapter-5.xhtml#chapter-5-sh8"><span> Usability Test Issues List</span></a></li>
+          <li><a href="#chapter-5-sh2-se1"><span> Usability Test Goal and Design</span></a></li>
+          <li><a href="#chapter-5-sh2-se2"><span> Usability Test Process </span></a></li>
+          <li><a href="#chapter-5-sh2-se3"><span> Usability Test Results Summary</span></a></li>
+          <li><a href="#chapter-5-sh2-se4"><span> Usability Test Issues List</span></a></li>
         </ol>
       </li>
     </ol>
@@ -121,11 +124,11 @@ Because only one of our team members had the skill to use D3, the other three me
 <h4 id="chapter-5-sh1">5.1. Quantitative Survey </h4>
 In the early prototyping phase, before the midterm presentation, we sent out a survey to understand more about what types of information would be the most useful to our users, their understanding of the prototyped visual formats we had already created, and any missing information they might expect to see. An overarching goal of this early research was to validate our design goals, the value of the data, and to identify if our visualization concepts were usable. Complete survey results can be viewed in Appendix B.
 
-<h4 id="chapter-5-sh1-se1">5.1.1. Survey Process </h4>
+<h5 id="chapter-5-sh1-se1">5.1.1. Survey Process </h5>
 
 We used a combination of survey for quantitative attitudinal responses with a minor usability aspect via images and survey responses. Survey respondents indicated that they were interested in reducing pollution via alternative fuel, and to a slightly lesser degree, they were interested in reducing pollution via alternative fuel vehicles particularly.
 
-<h4 id="chapter-5-sh1-se2">5.1.2 Survey Results and Validation </h4>
+<h5 id="chapter-5-sh1-se2">5.1.2 Survey Results and Validation </h5>
 
 Of the total respondents, 43% indicated that they would be considering purchasing an AFV in the next five years, or already own one. When asked about a hypothetical vehicle purchase in the next five years, the most popular choice was a gasoline-electric hybrid, followed by gasoline, then a three-way tie between diesel, electric, and plug-in hybrid. In terms of considerations for purchasing a new vehicle, fuel economy was the most important according to our survey takers, followed by interior space and number of doors. Least important were the number of cylinders in the engine, and the popularity of the vehicle model. Finally, we included images of two digital and one paper prototype, and asked respondents to rate the clarity and value of each visualization. These images are displayed below in Figures 3-5. The digital images were rated much higher than the paper prototype, and in retrospect it would have been a better idea to separate these and not to present them in the same question.
 
@@ -146,10 +149,63 @@ Once we had a complete prototype of our interactive visualization, we conducted 
 The goal of this standard usability test was to identify the ease of understanding and navigating our interactive prototype before we attempted to finalize the visualization. We attempted to identify major user issues and confusion, as well as missing components expected of users for a visualization targeting AFV information.
 
 
-<h4 id="chapter-5-sh2-se2">5.2.2. Usability Test Process</h4>
+<h5 id="chapter-5-sh2-se2">5.2.2. Usability Test Process</h5>
 Using a prototype version of our interactive visualization, we wrote a task list and conducted a usability test (the version of our prototype used for the test can be located here and the usability test script can be viewed in Appendix D). Each group member ran an individual participant, for a total of four participants, and these participants each completed a set of six tasks. Figure 6 below captures one of our participants in action.  Following standard usability procedures, the users were tasked initially to explore the visualization as naturally as possible as they would at home for an initial period of about 3 minutes, followed by directed tasks that targeted the specific state comparisons, year and emissions data, and most prominent AF type. Wrap up questions asked users about any missing data they’d expect to see, and the most memorable, frustrating, and confusing portions of the experience.
 
 
+<h5 id="chapter-5-sh2-se3">5.2.3. Usability Test Results Summary</h5>
+Overall the participants had a high success rate, and we got positive feedback about the effectiveness of the choropleth and the ease of use of the tab controls. Our participants were also surprised at the amount of information that was available and became highly engaged while exploring the visualization. Most users were surprised at the fidelity of the prototype, which may confound our results as the polish of the interactivity may skew users’ perceptions regarding the understandability of the data.
+
+
+<h5 id="chapter-5-sh2-se4">5.2.3. Usability Test Issues List</h5>
+We divided the feedback into major and minor issues, and into the categories of Data, Clarity, and Functionality. These issues are detailed below:
+
+
+Highlights
+
+- Tabbed exploration was effective for most participants.
+- Most participants were surprised by the abundant amount of information.
+
+Major issues
+
+Data
+
+- Participants weren’t sure how AFV’s compared against total car numbers within states. <br> _Fix = added a choropleth that displayed the ratio of gasoline vehicles to alternative fuel vehicles._
+Several participants expected to see regular gasoline information.  <br> _Fix = Added gasoline data._
+- Participants wanted to compare graphs on the overview page. <br> _Fix = combined both graphs on first page. We also built a tool to add up to four states to compare at once on this combined graph. _
+
+Clarity
+
+- Participants were confused by acronym usage. <br> _Fix = Wrote all acronyms out where possible, and added a definition below the plot when this was not possible._
+- Participants noticed legend and data point shapes didn’t always match. <br>_Fix = This was a default state of D3 that presented challenges in fixing, but would be a priority item in future work._
+
+Functionality
+
+Several participants found it difficult to undo a change, ctrl-Z, or go back a step. Fix = Unfortunately a back-one-step button could not be implemented in the time we had.
+
+
+
+Minor issues
+
+Functionality
+
+- Some participants found the choropleth zoom was too sensitive.  <br> _Fix = Reduced zoom sensitivity._
+- Some participants were confused by the function of our selectable legends because they had unclear radio vs. checkbox functions.  <br> _Fix = This is a default D3 state that would be a high priority item for future work. Giving the two different control types a different visual style, for example circles and squares as is common practice, would make this more usable._
+
+Clarity
+
+- Some participants noted popups of hover-text were confusing, from missing units or occlusion of background info. <br> _ Fix = Added units, and found a workaround for the occlusion._
+- Some Participants thought the animation (a slideshow that transitioned through the years 1994 to 2011) wasn’t very helpful. <br> _Fix = Removed animation._
+- Some participants had a hard time reading variations in the purple choropleth shading.  <br> _Fix = Adjusted the deepness of the purple to give more visual range_
+
+
+<h3 id="chapter-6">6. Redesign</h3>
+
+As outlined above, we discovered several major and minor issues during our usability test. While not all of the issues could be fully addressed, we still attempted to improve the experience as much as possible.
+
+The choropleth proved to be highly understandable by all participants, but many pointed out that the data would be more useful when shown as a comparison, especially for the percentage of AFVs to total vehicles in each state. We had already included this data in the details view popup, so it was easy to add another choice to the drop down menu which allowed it to be displayed on the map itself.
+
+On the overview tab, it was suggested that we combine the two graphs into one, which allowed for easier comparison between trends in number of AFVs and the carbon emissions from transportation sources for each state. This led to the addition of a tool to compare up to four states at once. We limited the comparison to four to reduce the change of occlusion, and to maintain readability of the legend colors. Thus, with more number of data sets, the rest of the tabs were created.
 
 
 
