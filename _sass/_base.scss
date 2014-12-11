@@ -159,8 +159,9 @@ p {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    //max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    //max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: 750px;
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -170,6 +171,7 @@ p {
     @include media-query($on-laptop) {
         max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
         max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+        //width: 100%;
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }

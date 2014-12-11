@@ -2,9 +2,13 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+    //border-top: 5px solid $grey-color-dark;
+    //border-bottom: 1px solid $grey-color-light;
+    border-top: solid 5px #F6BB42;
     min-height: 56px;
+    background-color: #f8f8f8;
+    border-bottom: solid 1px #ddd;
+
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -173,6 +177,15 @@
     }
 }
 
+.site-header {
+    .wrapper {
+        max-width: 840px;
+        @include media-query($on-palm) {
+        padding: 0 20px;
+      }
+    }
+}
+
 .page-heading {
     font-size: 20px;
 }
@@ -218,6 +231,11 @@
 .post-content {
     margin-bottom: $spacing-unit;
 
+    em {
+        color: #888;
+        font-size: 17px;
+    }
+
     h2 {
         font-size: 32px;
 
@@ -241,5 +259,17 @@
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+    }
+}
+
+
+.toc {
+ol {
+  counter-reset: section;
+  list-style-type: none;
+}
+li:before {
+  counter-increment: section;
+  content: counters(section,".") ". ";
     }
 }
