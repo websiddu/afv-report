@@ -38,18 +38,18 @@ permalink: /
       </li>
     </ol>
   </li>
-  <li><a href="chapter-6.xhtml"><span>Redesign</span></a></li>
-  <li><a href="chapter-7.xhtml"><span>Discussion</span></a></li>
-  <li><a href="chapter-8.xhtml"><span>Results</span></a></li>
-  <li><a href="chapter-9.xhtml"><span>Further Work</span></a></li>
-  <li><a href="chapter-10.xhtml"><span> References</span></a></li>
-  <li><a href="chapter-11.xhtml"><span> Appendices </span></a>
+  <li><a href="#chapter-6"><span>Redesign</span></a></li>
+  <li><a href="#chapter-7"><span>Discussion</span></a></li>
+  <li><a href="#chapter-8"><span>Results</span></a></li>
+  <li><a href="#chapter-9"><span>Further Work</span></a></li>
+  <li><a href="#chapter-10"><span> References</span></a></li>
+  <li><a href="#chapter-11"><span> Appendices </span></a>
     <ol>
-      <li><a href="chapter-11.xhtml#chapter-11-sh1"><span> Appendix A: Links to demo and data</span></a></li>
-      <li><a href="chapter-11.xhtml#chapter-11-sh2"><span> Appendix B: User research survey</span></a></li>
-      <li><a href="chapter-11.xhtml#chapter-11-sh3"><span> Appendix C: Personas</span></a></li>
-      <li><a href="chapter-11.xhtml#chapter-11-sh4"><span> Appendix D: Usability test task script</span></a></li>
-      <li><a href="chapter-11.xhtml#chapter-11-sh5"><span> Appendix E: Development process</span></a></li>
+      <li><a href="#chapter-11-sh1"><span> Appendix A: Links to demo and data</span></a></li>
+      <li><a href="#chapter-11-sh2"><span> Appendix B: User research survey</span></a></li>
+      <li><a href="#chapter-11-sh3"><span> Appendix C: Personas</span></a></li>
+      <li><a href="#chapter-11-sh4"><span> Appendix D: Usability test task script</span></a></li>
+      <li><a href="#chapter-11-sh5"><span> Appendix E: Development process</span></a></li>
     </ol>
   </li>
 </ol>
@@ -207,6 +207,101 @@ The choropleth proved to be highly understandable by all participants, but many 
 
 On the overview tab, it was suggested that we combine the two graphs into one, which allowed for easier comparison between trends in number of AFVs and the carbon emissions from transportation sources for each state. This led to the addition of a tool to compare up to four states at once. We limited the comparison to four to reduce the change of occlusion, and to maintain readability of the legend colors. Thus, with more number of data sets, the rest of the tabs were created.
 
+
+<h3 id="chapter-7">7. Discussion</h3>
+
+Throughout this entire project, we followed Shneiderman’s mantra of “overview first, zoom and filter, then details on demand.” We also followed Tufte’s principles of graphical excellence and integrity. In particular, we aimed to make a large data set coherent, and to reveal many levels within this data set, allow our users to think more deeply about the subject, and to avoid any distortion in the data. We aimed to show the data in the most efficient and easily understood ways possible. Each screen is discussed in detail below, in Figures 7-12.
+
+![Figure 7: Choropleth view](http://assets.websiddu.com/reports/afv/fig1.png)
+
+A: Showcases the overview of the graph and the zooming abilities of the visualization. The left side of the screen is consistent across all tabs as an overview, while the right side is contextual based on the selection of the top-right blue headers.
+
+B: This drop-down menu provides a tool for display options of the choropleth as shown below.
+
+![Figure1](http://assets.websiddu.com/reports/afv/fig2.png)
+
+C: Illustrates the hover-text of details on demand of each state. One minor issue that we were unable to resolve is that this hover-box is occluded by the drop-down menu at the top left. The work around is to drag the choropleth position so that the popup menu is no longer near the edge of the window.
+
+Because we had geographical data, displaying it as a choropleth made the most sense, and we got a lot of positive feedback about this in the usability tests. We kept this choropleth accessible at all times on the left side of the visualization. Many of the graphs in the right-hand side tabs are linked to individual state selection by the choropleth, so we wished to make that apparent and easy to control. This linking between graphs conveniently filters multiple data sets together. By selecting a single state we also support drilling down, from the US-wide data aggregation to a single state. The map view utilizes focus & context to some extent, and also supports panning and zooming. There is an animation in the zoom transition to make it easier to follow, as suggested by Few (2009).
+
+An autoplay animation feature was included at first when developing visualization with D3, that stepped through each year from 1994 to 2011. However, it was later removed since the change year-over-year was subtle which made it hard for users to recognize that the visualization was illustrating change over time.
+
+
+A: On the right side of the visualization, we offered a series of tabs for users to explore. The tabs start at the highest-level view on the left and drill down to more specific data on the right. We followed the left-to-right direction because that is a natural way of reading for users in the U.S. As viewing tabs from the left to the right, it tries to deliver more specific points. We started from the overview, provide data about available types of vehicles and types of fuel, and specific AFV models as well as manufacturers.
+
+![Figure 8: Overview tab](http://assets.websiddu.com/reports/afv/fig3.png)
+
+B: The “Overview” tab supports comparison between states for the total number of AFVs and carbon emissions from transportation sources for each state. We limited this to 4 states maximum so that occlusion is limited and so that we meet one of Few’s fundamental strengths of graphs: the ability to see everything at once (Few 2009).
+Many of our graphs have the year on the x-axis, so we chose to use line graphs because they are the most appropriate for showing change over time.
+
+C: The final step of Shneiderman’s mantra, details on demand, are offered by all of the graphs in our visualization.
+
+For the choropleth and overview tab views, we chose cool colors, mostly blues, to represent AFVs and warm colors, mostly reds, to represent carbon emissions. We wanted to associate feelings of nature and the environment with AFVs and to evoke the feeling of danger or warning when looking at carbon emissions.
+
+![Figure 9: AF Vehicles tab](http://assets.websiddu.com/reports/afv/fig4.png)
+
+A: In the next tab, titled “AF Vehicles,” selection and deselection of the vehicle types allow for filtering of data. The legend icon for that vehicle type changes when deselected, offering the user a visual reminder that the filter is in effect.
+By selecting between the two display states of total number and percent of total, we support re-expressing of the data which can lead to additional insights which might not otherwise be available
+
+B: Additionally, deselection of class type of vehicle can be conducted on the right hand side and allows a user to add or remove variables. This is designated by a filled (included) or empty (excluded) circle.
+
+![Figure 10: Alternative Fuels Types tab](http://assets.websiddu.com/reports/afv/fig5.png)
+
+The third tab, “Alternative Fuels Types,” and the previous tab illustrate Few’s principles of optimal quantitative scales and Tufte’s principles of graphical excellence, with all bar plots starting at 0 and the line graphs having a scale from slightly below to slightly above the range of data values (Few 2009, Tufte 1983).
+
+![Figure 11: AFV Models tab](http://assets.websiddu.com/reports/afv/fig6.png)
+
+In the “AFV Models” tab, the bar graph allows for re-visualizing the data, because the user may switch between grouped and stacked bars. Even though stacked graphs can be difficult to visualize direct comparisons as all the shaded portions begin and end in different areas, the thickness of the area, user’s autonomy, and quickness of speed switching between these views allows more insights to be made depending on what one may be looking at. In Figure 11 above, a snapshot of the mid-transition was selected to display both sets of grouped and stacked visualization. We chose to use bars for this graph because they are especially good at displaying differences in magnitude and making it easy to compare those differences.
+
+![Figure 12: AFV Manufacturers tab](http://assets.websiddu.com/reports/afv/fig7.png)
+
+
+A: The final tab, “AFV Manufacturers,” is dominated by a scatter plot that we intended to display all currently available AFV models, plotted by fuel economy in miles per gallon equivalent vs. carbon emissions, with other dimensions of the data set encoded as color and size of the data points.
+
+B: This graph would also support filtering by additional dimensions such as vehicle make. This graph was aimed at users who are interested in buying an AFV and is intended to be used as a tool for searching for a vehicle that suits consumer needs.
+
+C: Unfortunately, for this graph to be fully implemented using D3, we needed to have the data formatted into a database that would be accessible online. We did not have enough time to accomplish this, so we created a similar plot using Tableau that is accessible from a link on this tab, viewable in Figure 13 below.
+
+
+![Figure 13: Tableau addendum view](http://assets.websiddu.com/reports/afv/fig7.png)
+
+
+A: This graph is also a scatter plot, which is the most appropriate plot type for this data, because of its ability to encode two quantitative values: one based on its horizontal position and one based on its vertical position. According to Few (2009), points encourage us to notice patterns and points that stand out from the group as outliers.
+
+B: Besides the quantitative values by which the points are plotted, we have encoded other values as well, including nominal data such as vehicle make, model, and class, and ordinal data such as year and number of cylinders. Again, this graph was limited in our intended result by our access to data.
+
+C: On the y-axis we have plotted by the dollar amount that could be saved in fuel based on the average fuel costs of a regular gasoline vehicle. This is not the most easily understood dimension and makes many assumptions that are perhaps not the most accurate for all users. Had we access to the data, purchase cost or Kelley Blue Book value might have been a better choice for this axis.
+
+
+
+<h3 id="chapter-8">8. Results</h3>
+
+This visualization project taught us how to create a visualization that is interactive, efficient, and delivers key information. To develop the visualization, we had to gather relevant data sets, clean and format them, understand target users, create a prototype and conduct user testing, then revise the prototype based on user feedback to come up with our final visualization. We were able to have hands on experience with the project.
+
+Being this close to such a large data set gave us ample opportunity to discover unexpected findings. Not all of these can be answered from the data we have compiled, however. For example, the highest reported ratio of AFVs to regular gasoline or diesel vehicles occurs in Washington, D.C. from the year 2000 onward. Is this because the federal government has been purchasing drastically more AFVs than the general population? Or, because reporting is voluntary, are governmental agencies simply more diligent about recording this information?
+
+When exploring each graph in the visualization, we observed an interesting trend in the graph ‘Number of AFVs and Carbon emissions Over the years’. In 2007, we noticed a sudden decrease in carbon emissions. This motivated us to figure out more about what happened in 2007. According to Olivier et al. (2011), the Kyoto Protocol was signed in 2007 and the price of gasoline was at its peak. As with other countries that signed or ratified the Kyoto Protocol, the United States began to execute climate policies that helped to reduce carbon emissions. Greene (2006) addressed that greenhouse gas emissions can be reduced by regulating transportation. He also stressed that public policy has a larger impact than market forces to increase fuel economy.
+
+In combination with some additional research, our visualization led us to learn more about the rise of AFV usage in the US over the past two decades.
+
+
+<h3 id="chapter-9"> Further Work</h3>
+Given more time and resources, we would like to probe deeper into the correlation between pollution levels and alternative fuel usage. We would like to answer questions such as: what are the carbon emissions savings by alternative fuels over the reporting period; are enough alternative fuels are being produced to meet current and projected demand; and how many alternative fuel vehicles would be required to replace traditional gasoline engines to reduce carbon emissions in the U.S. by a specified amount? Other more narrow foci would potentially have us explore specific models that may be appearing in the near future (using the DOE’s fuel economy data set). This could be used to improve our car buyer’s tool, especially when used in combination with our more general trends and comparisons.
+
+We hoped to gather data to provide the number of AFVs sold by model, and other quantitative data by model such as Kelley Blue Book value would also have aided the utility of our AFV Manufacturer tab.
+
+
+<h3 id="chapter-10"> References </h3>
+<ol>
+  <li>Few, S. (2009). Now You See It: Simple visualization techniques for quantitative analysis. Analytics Press.</li>
+  <li>Greene, D. L. (2006). Reducing Greenhouse Gas Emissions from Transportation [Powerpoint slides]. A presentation to </li>Legislative Commission on Global Climate Change.
+  <li>Oliver, J. G., et al. (2011). Long-Term Trend In Global CO2 Emissions. 2011 Report. PBL</li>
+  <li>Shneiderman, B. (1996, September). The eyes have it: A task by data type taxonomy for information visualizations. In </li>Visual Languages, 1996. Proceedings., IEEE Symposium on (pp. 336-343). IEEE.
+  <li>Tufte, E. R., & Graves-Morris, P. R. (1983). The Visual Display of Quantitative Information (Vol. 2). Cheshire, CT: </li>Graphics press.
+  <li>Bostock, M. (2013). Data-Driven Documents. Retrieved from http://d3js.org/.</li>
+  <li>“Communication Simplified.” (2014). The Noun Project. Retrieved from http://thenounproject.com/.</li>
+  <li>"NVD3 Re-usable Charts for D3.js." (2014). NVD3. Retreived from http://nvd3.org/.</li>
+</ol>
 
 
 
