@@ -86,11 +86,13 @@ As a part of the data discovery and cleaning phase, we explored existing researc
 The U.S. Energy Information Administration published an interactive visualization using the same data sets with which we began the study. This tool is fairly comprehensive, with graphs for yearly totals of vehicles and fuel consumed, consumption by fuel type, number and fuel consumed by vehicle type, number owned and fuel used by user group, and total vehicles and fuel consumed by state. The interactions support filtering, but nearly all of the graphs are presented as bar charts, with two choropleths provided for the state data. Even though this visualization uses much of the same data and presents similar comparisons, we feel that we have ample opportunity to improve upon the existing tools. A view of this visualization is shown below in Figure 1.
 
 
+![Figure 1: Example of an interactive visualization provided by the US Energy Information Administration that served as inspiration for our work.]({{ site.url }}assets/fig1.png)
 
 The US EIA provided the data set from the visualization discussed above for download, and it looked to be extremely useful to our needs. However, upon inspection, the data set was not complete and had many missing entries. We emailed the administrator and thankfully received back a complete data set. This provided us with several more years’ worth of data in a format that was already prepared for use in Tableau, so it was very easy to import, combine with our existing data set, and explore.
 
 Figure 2 below illustrates on-road alternative fuel vehicles made available by year. It is an interactive stacked bar graph which users can either select or deselect the index provided on the right. This bar graph inspired us with an effective way to deliver our message. The initial impression on this graph made us think that this was a plain blue bar graph. However, deselecting the ethanol-85 (E85) index provided us with a different insight. We were able to see other fields clearly. In some of our data sets, there are data sets with one distinctive field. For instance, when we were exploring data sets for types of alternative fuels provided, E85 had an extremely high value compared to other fields. In this case, providing a static bar graph would not give users the ability to explore further and would keep key information essentially hidden. In this figure, by unchecking indexes, users can explore each index in depth.
 
+![Figure 2: On-Road AFVs Made Available by Year retrieved from the Alternative Fuels Data Center in the US Department of Energy. ]({{ site.url }}assets/fig2.png)
 
 <h3 id="chapter-4">4. Design Process and Milestones</h3>
 
@@ -132,9 +134,11 @@ We used a combination of survey for quantitative attitudinal responses with a mi
 
 Of the total respondents, 43% indicated that they would be considering purchasing an AFV in the next five years, or already own one. When asked about a hypothetical vehicle purchase in the next five years, the most popular choice was a gasoline-electric hybrid, followed by gasoline, then a three-way tie between diesel, electric, and plug-in hybrid. In terms of considerations for purchasing a new vehicle, fuel economy was the most important according to our survey takers, followed by interior space and number of doors. Least important were the number of cylinders in the engine, and the popularity of the vehicle model. Finally, we included images of two digital and one paper prototype, and asked respondents to rate the clarity and value of each visualization. These images are displayed below in Figures 3-5. The digital images were rated much higher than the paper prototype, and in retrospect it would have been a better idea to separate these and not to present them in the same question.
 
-![Figure 3]()
-![Figure 4]()
-![Figure 5]()
+![Figure 3: View A of our prototype used in the user research survey. Choropleths offer an easily understood presentation of the data, and this prototype ranked highly for understandability and utility.]({{ site.url }}assets/fig3.png)
+
+![Figure 4: View B of our prototype used in the user research survey. Some readers had difficulty understanding the acronyms used in the legend, but otherwise this graph also scored highly for understandability and utility.]({{ site.url }}assets/fig4.png)
+
+![Figure 5: View C of our prototype used in the user research survey. As compared to the digital prototypes, this view was somewhat confusing to users and ranked lower for understandability and utility. However, the compound view of multiple graphs was seen as being a good way of presenting the complex data.]({{ site.url }}assets/fig5.png)
 
 
 Although illuminating, these results are likely not indicative of the general population, as the survey was sent out over social media and therefore was limited by the social networks of the team. Additionally, while we asked users questions about their locations, history,  However, this feedback was very useful to help guide us into the direction we should focus our visualizations.
@@ -143,6 +147,7 @@ Although illuminating, these results are likely not indicative of the general po
 <h3 id="chapter-5-sh2">5.2. Usability Study</h3>
 Once we had a complete prototype of our interactive visualization, we conducted a usability study to ensure that our graphs were understandable and useful, and that the interactions were intuitive for a new user.
 
+![Figure 6: One of our usability test participants during the evaluation.]({{ site.url }}assets/fig6.png)
 
 <h4 id="chapter-5-sh2-se1">5.2.1. Usability Test Goal and Design </h4>
 
@@ -212,13 +217,13 @@ On the overview tab, it was suggested that we combine the two graphs into one, w
 
 Throughout this entire project, we followed Shneiderman’s mantra of “overview first, zoom and filter, then details on demand.” We also followed Tufte’s principles of graphical excellence and integrity. In particular, we aimed to make a large data set coherent, and to reveal many levels within this data set, allow our users to think more deeply about the subject, and to avoid any distortion in the data. We aimed to show the data in the most efficient and easily understood ways possible. Each screen is discussed in detail below, in Figures 7-12.
 
-![Figure 7: Choropleth view](http://assets.websiddu.com/reports/afv/fig1.png)
+![Figure 7: Choropleth view]({{ site.url }}assets/fig7.png)
 
 A: Showcases the overview of the graph and the zooming abilities of the visualization. The left side of the screen is consistent across all tabs as an overview, while the right side is contextual based on the selection of the top-right blue headers.
 
 B: This drop-down menu provides a tool for display options of the choropleth as shown below.
 
-![Figure1](http://assets.websiddu.com/reports/afv/fig2.png)
+![]({{ site.url }}assets/fig7.1.png)
 
 C: Illustrates the hover-text of details on demand of each state. One minor issue that we were unable to resolve is that this hover-box is occluded by the drop-down menu at the top left. The work around is to drag the choropleth position so that the popup menu is no longer near the edge of the window.
 
@@ -229,7 +234,7 @@ An autoplay animation feature was included at first when developing visualizatio
 
 A: On the right side of the visualization, we offered a series of tabs for users to explore. The tabs start at the highest-level view on the left and drill down to more specific data on the right. We followed the left-to-right direction because that is a natural way of reading for users in the U.S. As viewing tabs from the left to the right, it tries to deliver more specific points. We started from the overview, provide data about available types of vehicles and types of fuel, and specific AFV models as well as manufacturers.
 
-![Figure 8: Overview tab](http://assets.websiddu.com/reports/afv/fig3.png)
+![Figure 8: Overview tab]({{ site.url }}assets/fig8.png)
 
 B: The “Overview” tab supports comparison between states for the total number of AFVs and carbon emissions from transportation sources for each state. We limited this to 4 states maximum so that occlusion is limited and so that we meet one of Few’s fundamental strengths of graphs: the ability to see everything at once (Few 2009).
 Many of our graphs have the year on the x-axis, so we chose to use line graphs because they are the most appropriate for showing change over time.
@@ -238,22 +243,22 @@ C: The final step of Shneiderman’s mantra, details on demand, are offered by a
 
 For the choropleth and overview tab views, we chose cool colors, mostly blues, to represent AFVs and warm colors, mostly reds, to represent carbon emissions. We wanted to associate feelings of nature and the environment with AFVs and to evoke the feeling of danger or warning when looking at carbon emissions.
 
-![Figure 9: AF Vehicles tab](http://assets.websiddu.com/reports/afv/fig4.png)
+![Figure 9: AF Vehicles tab]({{ site.url }}assets/fig9.png)
 
 A: In the next tab, titled “AF Vehicles,” selection and deselection of the vehicle types allow for filtering of data. The legend icon for that vehicle type changes when deselected, offering the user a visual reminder that the filter is in effect.
 By selecting between the two display states of total number and percent of total, we support re-expressing of the data which can lead to additional insights which might not otherwise be available
 
 B: Additionally, deselection of class type of vehicle can be conducted on the right hand side and allows a user to add or remove variables. This is designated by a filled (included) or empty (excluded) circle.
 
-![Figure 10: Alternative Fuels Types tab](http://assets.websiddu.com/reports/afv/fig5.png)
+![Figure 10: Alternative Fuels Types tab]({{ site.url }}assets/fig10.png)
 
 The third tab, “Alternative Fuels Types,” and the previous tab illustrate Few’s principles of optimal quantitative scales and Tufte’s principles of graphical excellence, with all bar plots starting at 0 and the line graphs having a scale from slightly below to slightly above the range of data values (Few 2009, Tufte 1983).
 
-![Figure 11: AFV Models tab](http://assets.websiddu.com/reports/afv/fig6.png)
+![Figure 11: AFV Models tab]({{ site.url }}assets/fig11.png)
 
 In the “AFV Models” tab, the bar graph allows for re-visualizing the data, because the user may switch between grouped and stacked bars. Even though stacked graphs can be difficult to visualize direct comparisons as all the shaded portions begin and end in different areas, the thickness of the area, user’s autonomy, and quickness of speed switching between these views allows more insights to be made depending on what one may be looking at. In Figure 11 above, a snapshot of the mid-transition was selected to display both sets of grouped and stacked visualization. We chose to use bars for this graph because they are especially good at displaying differences in magnitude and making it easy to compare those differences.
 
-![Figure 12: AFV Manufacturers tab](http://assets.websiddu.com/reports/afv/fig7.png)
+![Figure 12: AFV Manufacturers tab]({{ site.url }}assets/fig12.png)
 
 
 A: The final tab, “AFV Manufacturers,” is dominated by a scatter plot that we intended to display all currently available AFV models, plotted by fuel economy in miles per gallon equivalent vs. carbon emissions, with other dimensions of the data set encoded as color and size of the data points.
@@ -263,7 +268,7 @@ B: This graph would also support filtering by additional dimensions such as vehi
 C: Unfortunately, for this graph to be fully implemented using D3, we needed to have the data formatted into a database that would be accessible online. We did not have enough time to accomplish this, so we created a similar plot using Tableau that is accessible from a link on this tab, viewable in Figure 13 below.
 
 
-![Figure 13: Tableau addendum view](http://assets.websiddu.com/reports/afv/fig7.png)
+![Figure 13: Tableau addendum view]({{ site.url }}assets/fig13.png)
 
 
 A: This graph is also a scatter plot, which is the most appropriate plot type for this data, because of its ability to encode two quantitative values: one based on its horizontal position and one based on its vertical position. According to Few (2009), points encourage us to notice patterns and points that stand out from the group as outliers.
